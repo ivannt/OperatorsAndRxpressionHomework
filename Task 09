@@ -1,0 +1,32 @@
+/* Task 9: Write an expression that cheks for given points(x,y) if it`s within the circle K((1,1)3) and out of the rectangle 
+ * R(top - 1, left - -1, width - 6, height - 2)*/
+
+
+using System;
+class OutOfTheRectangle
+{
+    static void Main()
+    {
+        Console.Title = " OutOfTheRectangle ";
+        Console.Write(" Enter coordinate X: ");
+        decimal coordX = decimal.Parse(Console.ReadLine());
+        Console.Write(" Enter coordinate Y: ");
+        decimal coordY = decimal.Parse(Console.ReadLine());
+        if ((coordX * coordX) + (coordY * coordY) <= 6)
+        {
+
+            if ((coordX >= 1) && (coordX <= 6) && (coordY >= -1) && (coordY <= 3))
+            {
+                Console.WriteLine(" The point is in the rectangle R ");
+            }
+            else
+            {
+                Console.WriteLine(" The Point is in the circle K and out of the rectangle R ");
+            }
+        }
+        else
+        {
+            Console.WriteLine(" The Point is NOT in the circle K ");
+        }
+    }
+}
