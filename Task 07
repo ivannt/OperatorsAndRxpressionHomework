@@ -1,0 +1,23 @@
+/* Task 7: Write an expression that cheks if given positive integer number N( N < 100 ) is prime. E.g. 37 is prime.*/
+
+using System;
+class IsPrimeNumber
+{
+    static void Main()
+    {
+        Console.Title = " IsPrimeNumber ";
+        Console.Write(" Enter a number from 0 to 100: ");
+        int number = int.Parse(Console.ReadLine());/* Enter the number 37 */
+        int count = 0;
+        for (int i = 1; i <= number; i++)
+        {
+            if (number % i <= 0)
+            {
+                count++;
+            }
+        }
+        Console.WriteLine(new string('-',33));
+        Console.WriteLine(count == 2 ? "The number is prime.\n" : "The number is NOT prime.\n");
+        Console.WriteLine(new string('-',33));
+    }
+}
