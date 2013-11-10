@@ -1,0 +1,26 @@
+/* Task 6: Write an exprecion that cheks if given point (x,y), within a circle K (0,5).*/
+
+using System;
+class WithinACircle
+{
+    static void Main()
+    {
+        Console.Title = " WithinACircle ";
+        Console.Write(" Enter X coordinate: ");
+        decimal xNum = decimal.Parse(Console.ReadLine());/* decimal for high precision*/
+        {
+            Console.WriteLine();
+        }
+        Console.Write(" Enter Y coordinate: ");
+        decimal yNum = decimal.Parse(Console.ReadLine());/* decimal for high precision*/
+        if ((xNum * xNum) + (yNum * yNum) <= 25) 
+        {
+            Console.WriteLine(new string('-', 60));
+            Console.WriteLine(" The point with theese coordinates are in the Circle 'K'(0,5) ");
+        }
+        else
+        {
+            Console.WriteLine(new string('-', 64));
+            Console.WriteLine(" The point with theese coordinates are NOT in the Circle 'K'(0,5) ");
+        }
+    }
