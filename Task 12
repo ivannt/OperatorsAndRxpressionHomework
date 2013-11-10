@@ -1,0 +1,35 @@
+/* Task 12: We are given a integer number n, value v and position p. Write a sequence of operators 
+ * that modifies n to hold the value v at the position p from the binary representation of n.*/
+
+
+using System;
+class SequenceOfOperators
+{
+    static void Main()
+    {
+        Console.Title = " SequenceOfOperators ";
+        Console.Write(" Enter a number: ");
+        int numberN = int.Parse(Console.ReadLine());
+        Console.Write(" Enter a bit position: ");
+        int positionP = int.Parse(Console.ReadLine());
+        Console.Write(" Enter a bit value: ");
+        int valueV = int.Parse(Console.ReadLine());
+        int mask = 1 ;
+        int result;
+        if (valueV == 0)
+        {
+            mask = ~(1 << positionP);
+            result = numberN & mask;
+            Console.WriteLine(new string('-', 22));
+            Console.WriteLine(" The result is: " + result);
+        }
+        else
+        {
+            mask = 1 << positionP;
+            result = numberN | mask;
+            Console.WriteLine(new string('-', 22));
+            Console.WriteLine(" The result is: " + result);
+            Console.WriteLine(" \n\n\n");
+        }
+    }
+}
