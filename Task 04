@@ -1,0 +1,22 @@
+/* Task 4: Write an expression that cheks for given integer if it`s third digit - right to left - is 7 E.g. - 1732 -> true*/
+
+using System;
+class BooleanThirdDigit
+{
+    static void Main()
+    {
+        Console.Title = " BooleanThirdDigit ";
+        Console.WriteLine(" Enter the digit: ");
+        int digit = int.Parse(Console.ReadLine());
+        digit /= 100;/* Делим на 100, за да видим третата цифра от четирицифреното число - в случая 1732*/
+        if (digit % 10 == 7)/* Акцентира върху третата цифра, която
+                             * в случая задължително трабва да е 7, като като 17 се раздели на 10 => връща остатък 1*/
+        {
+            Console.WriteLine(" The Third digit, from right to left is 7 ");
+        }
+        else
+        {
+            Console.WriteLine(" The Third digit is NOT 7 ");
+        }
+    }
+}
