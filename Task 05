@@ -1,0 +1,16 @@
+/* Task 5: Write a boolean expression for finding if the bit 3 of a given integer is 1 or 0*/
+
+using System;
+class LookingForThirdBit
+{
+    static void Main()
+    {
+        Console.Title = " LookingForThirdBit ";
+        Console.WriteLine(" Enter the number: ");
+        int number = int.Parse(Console.ReadLine());
+        int bitNum = 3;/* Bit posicion */
+        int mask = 1;
+        int result = number >> bitNum & mask;
+        Console.WriteLine(" The Third Bit is: " + result);
+    }
+}
